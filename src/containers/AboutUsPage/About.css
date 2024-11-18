@@ -1,0 +1,16 @@
+.about-container {
+    padding: 50px;
+    text-align: center;
+    background-color: #e0f7fa;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    color: #00796b;
+  }
+  
+  .about-text {
+    font-size: 1.5rem;
+    color: #004d40;
+  }
+  
