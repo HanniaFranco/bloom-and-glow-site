@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/bloom-and-glow-site/static/css/main.5cab7eef.css",
-    "main.js": "/bloom-and-glow-site/static/js/main.511e06a3.js",
+    "main.js": "/bloom-and-glow-site/static/js/main.25d1ec29.js",
     "static/js/453.ad6a6252.chunk.js": "/bloom-and-glow-site/static/js/453.ad6a6252.chunk.js",
     "static/media/product_1.png": "/bloom-and-glow-site/static/media/product_1.e238ad058f56e6118152.png",
     "static/media/product_2.png": "/bloom-and-glow-site/static/media/product_2.47c644741e10a096943b.png",
     "static/media/product_3.png": "/bloom-and-glow-site/static/media/product_3.be1298eb9d1f1cf79334.png",
     "index.html": "/bloom-and-glow-site/index.html",
     "main.5cab7eef.css.map": "/bloom-and-glow-site/static/css/main.5cab7eef.css.map",
-    "main.511e06a3.js.map": "/bloom-and-glow-site/static/js/main.511e06a3.js.map",
+    "main.25d1ec29.js.map": "/bloom-and-glow-site/static/js/main.25d1ec29.js.map",
     "453.ad6a6252.chunk.js.map": "/bloom-and-glow-site/static/js/453.ad6a6252.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5cab7eef.css",
-    "static/js/main.511e06a3.js"
+    "static/js/main.25d1ec29.js"
   ]
 }
