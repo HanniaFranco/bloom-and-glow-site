@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/bloom-and-glow-site/static/css/main.5cab7eef.css",
-    "main.js": "/bloom-and-glow-site/static/js/main.6b4214f9.js",
+    "main.css": "/bloom-and-glow-site/static/css/main.4600cd93.css",
+    "main.js": "/bloom-and-glow-site/static/js/main.ee5fb50a.js",
     "static/js/453.ad6a6252.chunk.js": "/bloom-and-glow-site/static/js/453.ad6a6252.chunk.js",
     "static/media/product_1.png": "/bloom-and-glow-site/static/media/product_1.e238ad058f56e6118152.png",
     "static/media/product_2.png": "/bloom-and-glow-site/static/media/product_2.47c644741e10a096943b.png",
     "static/media/product_3.png": "/bloom-and-glow-site/static/media/product_3.be1298eb9d1f1cf79334.png",
+    "static/media/xicon.png": "/bloom-and-glow-site/static/media/xicon.7e40f617aaa8eca864bb.png",
+    "static/media/usuario.png": "/bloom-and-glow-site/static/media/usuario.ae3a914be1e9f200b221.png",
+    "static/media/instagram.png": "/bloom-and-glow-site/static/media/instagram.b4ff9be06a8f84fada1b.png",
+    "static/media/pinterest.png": "/bloom-and-glow-site/static/media/pinterest.49ca89a8e1ce086ec17d.png",
+    "static/media/facebook.png": "/bloom-and-glow-site/static/media/facebook.b293d5363351752caf25.png",
     "index.html": "/bloom-and-glow-site/index.html",
-    "main.5cab7eef.css.map": "/bloom-and-glow-site/static/css/main.5cab7eef.css.map",
-    "main.6b4214f9.js.map": "/bloom-and-glow-site/static/js/main.6b4214f9.js.map",
+    "main.4600cd93.css.map": "/bloom-and-glow-site/static/css/main.4600cd93.css.map",
+    "main.ee5fb50a.js.map": "/bloom-and-glow-site/static/js/main.ee5fb50a.js.map",
     "453.ad6a6252.chunk.js.map": "/bloom-and-glow-site/static/js/453.ad6a6252.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cab7eef.css",
-    "static/js/main.6b4214f9.js"
+    "static/css/main.4600cd93.css",
+    "static/js/main.ee5fb50a.js"
   ]
 }
