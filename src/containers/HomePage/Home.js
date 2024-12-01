@@ -37,28 +37,30 @@ function Home() {
   ];
 
   return (
-    <Header />
-    <div className="home-container">
-      <div className="welcome-section">
-        <h1 className="home-title">BLOOM & GLOW</h1>
-        <p className="home-text">Deja que tu belleza florezca y brille</p>
+    <>
+      <Header />
+      <div className="home-container">
+        <div className="welcome-section">
+          <h1 className="home-title">BLOOM & GLOW</h1>
+          <p className="home-text">Deja que tu belleza florezca y brille</p>
+        </div>
+        
+        <h2 className="products-title">Productos Destacados</h2>
+        <div className="products-section">
+          {products.map((product, index) => (
+            <ProductCard
+              key={index}
+              image={product.image}
+              name={product.name}
+              description={product.description}
+              price={product.price}
+            />
+          ))}
+        </div>
+  
+        <Footer />
       </div>
-      
-      <h2 className="products-title">Productos Destacados</h2>
-      <div className="products-section">
-        {products.map((product, index) => (
-          <ProductCard
-            key={index}
-            image={product.image}
-            name={product.name}
-            description={product.description}
-            price={product.price}
-          />
-        ))}
-      </div>
-
-      <Footer />
-    </div>
+    </>
   );
 }
 
