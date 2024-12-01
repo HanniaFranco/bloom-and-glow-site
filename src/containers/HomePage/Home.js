@@ -8,7 +8,7 @@ import image3 from '../../assets/images/product_3.png';
 function Nav() {
   return (
     <nav className="navbar">
-      <h2 className="logo">Bloom & Glow</h2>
+      <h2 className="logo">BLOOM & GLOW</h2>
       <ul className="nav-links">
         <li>Inicio</li>
         <li>Nosotros</li>
@@ -54,8 +54,8 @@ function Home() {
       <Nav />
       
       <div className="welcome-section">
-        <h1 className="home-title">BIENVENID@S A BLOOM & GLOW</h1>
-        <p className="home-text">Tu destino de moda y belleza, ¡Deja que tu belleza florezca y brille!</p>
+        <h1 className="home-title">BLOOM & GLOW</h1>
+        <p className="home-text">Deja que tu belleza florezca y brille</p>
       </div>
       
       <h2 className="products-title">Productos Destacados</h2>
