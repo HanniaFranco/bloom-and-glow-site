@@ -1,23 +1,10 @@
 import React from 'react';
 import './Home.css';
 import ProductCard from '../../components/ProductCard/ProductCard';
+import Header from '../../components/Header/Header';
 import image1 from '../../assets/images/product_1.png';
 import image2 from '../../assets/images/product_2.png';
 import image3 from '../../assets/images/product_3.png';
-
-function Nav() {
-  return (
-    <nav className="navbar">
-      <h2 className="logo">BLOOM & GLOW</h2>
-      <ul className="nav-links">
-        <li>Inicio</li>
-        <li>Nosotros</li>
-        <li>Tienda</li>
-        <li>Contacto</li>
-      </ul>
-    </nav>
-  );
-}
 
 function Footer() {
   return (
@@ -50,9 +37,8 @@ function Home() {
   ];
 
   return (
+    <Header />
     <div className="home-container">
-      <Nav />
-      
       <div className="welcome-section">
         <h1 className="home-title">BLOOM & GLOW</h1>
         <p className="home-text">Deja que tu belleza florezca y brille</p>
