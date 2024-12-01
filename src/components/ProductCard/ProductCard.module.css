@@ -19,10 +19,6 @@
     transition: transform 0.3s ease;
   }
   
-  .image:hover {
-    transform: scale(1.1);
-  }
-  
   .name {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
