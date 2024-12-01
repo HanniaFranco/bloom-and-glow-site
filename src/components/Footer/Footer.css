@@ -1,87 +1,137 @@
-/* Estilos generales del footer */
 .footer {
-    background-color: #f1f1f1;
-    padding: 30px;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .footer h4 {
-    cursor: pointer;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+    background-color: #dddada; /* Fondo claro */
+    padding: 40px 20px; /* Añade padding para un mejor espaciado */
+    color: #333;
+    font-family: "Poppins", serif;
   }
   
   .footer-links {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinea las secciones a la izquierda */
+    flex-wrap: wrap; /* Permite que se apilen en pantallas pequeñas */
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 20px; /* Añade padding lateral */
+    position: relative; /* Para posicionar los iconos de redes sociales */
   }
   
   .footer-section {
     width: 30%;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Añade margen inferior para espaciado */
   }
   
-  .footer-section ul {
+  .footer-section h4 {
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+    text-align: left; /* Asegura que los títulos estén alineados a la izquierda */
+  }
+  
+  .footer-list {
     list-style: none;
     padding: 0;
+    text-align: left; /* Alineación izquierda */
+    visibility: visible; /* Asegura que la lista sea visible */
+    opacity: 1; /* Asegura que no esté invisible */
   }
   
-  .footer-section li {
-    margin-bottom: 10px;
+  .footer-list li {
+    padding: 5px 0;
   }
   
   .footer-socials {
     display: flex;
     gap: 15px;
-    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Alinea verticalmente los iconos */
   }
   
   .footer-socials img {
-    width: 32px;
-    height: 32px;
-    transition: opacity 0.3s ease;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
   }
   
   .footer-socials img:hover {
-    opacity: 0.7;
+    filter: brightness(1.2);
+    opacity: 0.8;
+    transform: scale(1.2);
+    filter: hue-rotate(180deg); 
   }
   
   .footer-bottom {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
+    margin-top: 20px; /* Reduce el margen superior */
     text-align: center;
+    font-size: 0.875rem;
   }
   
-  .footer-bottom a {
+  .footer-bottom p {
+    font-weight: 600;
+  }
+  
+  .footer-bottom-links {
+    margin-top: 10px;
+  }
+  
+  .footer-bottom-links a {
     margin: 0 10px;
-    font-size: 0.9rem;
-    color: #000;
     text-decoration: none;
+    color: #333;
   }
   
-  .footer-bottom a:hover {
-    color: #ff69b4;
+  .footer-bottom-links a:hover {
+    color: #63448b; /* Hover para los enlaces */
   }
   
-  /* Estilo para pantallas pequeñas (responsive) */
+  /* Responsive */
   @media (max-width: 768px) {
-    .footer-section h4 {
-      font-size: 1rem;
-    }
-  
     .footer-section {
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
   
     .footer-socials {
       justify-content: center;
       margin-top: 20px;
+      position: static; /* Restablece la posición en pantallas pequeñas */
+      transform: none;
     }
   
-    .footer-bottom {
-      font-size: 0.8rem;
+    .footer-bottom-links {
+      display: block;
+      margin-top: 10px;
+    }
+  
+    .footer-list {
+      display: none; /* Oculta las listas por defecto */
+      text-align: center; /* Centra los elementos */
+    }
+  
+    .footer-list.open {
+      display: block; /* Muestra las listas cuando están abiertas */
+    }
+  
+    .toggle-header {
+      display: block; /* Muestra los encabezados de toggle */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .toggle-header {
+      display: block; /* Oculta los encabezados de toggle */
+    }
+  
+    .footer-list {
+      display: block; /* Asegura que las listas estén siempre visibles */
+    }
+  
+    .footer-section h4 {
+      font-weight: bold; /* Asegura que los encabezados estén en negritas */
+      margin-bottom: 20px; /* Añade más espacio abajo */
+      text-align: left; /* Alinea los encabezados a la izquierda */
     }
   }
   
