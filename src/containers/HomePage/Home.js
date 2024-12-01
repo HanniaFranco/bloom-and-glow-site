@@ -2,17 +2,10 @@ import React from 'react';
 import './Home.css';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import image1 from '../../assets/images/product_1.png';
 import image2 from '../../assets/images/product_2.png';
 import image3 from '../../assets/images/product_3.png';
-
-function Footer() {
-  return (
-    <footer className="footer">
-      <p>© 2024 Bloom & Glow. All Rights Reserved.</p>
-    </footer>
-  );
-}
 
 function Home() {
   const products = [
