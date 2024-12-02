@@ -1,23 +1,23 @@
 .footer {
-    background-color: #dddada; /* Fondo claro */
-    padding: 40px 20px; /* Añade padding para un mejor espaciado */
+    background-color: #dddada; 
+    padding: 40px 20px; 
     color: #333;
     font-family: "Poppins", serif;
   }
   
   .footer-links {
     display: flex;
-    justify-content: flex-start; /* Alinea las secciones a la izquierda */
-    flex-wrap: wrap; /* Permite que se apilen en pantallas pequeñas */
-    max-width: 1200px; /* Limita el ancho máximo */
-    margin: 0 auto; /* Centra el contenido */
-    padding: 0 20px; /* Añade padding lateral */
-    position: relative; /* Para posicionar los iconos de redes sociales */
+    justify-content: flex-start; 
+    flex-wrap: wrap;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px; 
+    position: relative; 
   }
   
   .footer-section {
     width: 30%;
-    margin-bottom: 20px; /* Añade margen inferior para espaciado */
+    margin-bottom: 20px; 
   }
   
   .footer-section h4 {
@@ -25,15 +25,15 @@
     font-weight: bold;
     color: #333;
     margin: 10px 0;
-    text-align: left; /* Asegura que los títulos estén alineados a la izquierda */
+    text-align: left; 
   }
   
   .footer-list {
     list-style: none;
     padding: 0;
-    text-align: left; /* Alineación izquierda */
-    visibility: visible; /* Asegura que la lista sea visible */
-    opacity: 1; /* Asegura que no esté invisible */
+    text-align: left; 
+    visibility: visible; 
+    opacity: 1; 
   }
   
   .footer-list li {
@@ -45,8 +45,8 @@
     gap: 15px;
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%); /* Alinea verticalmente los iconos */
+    top: 60%;
+    transform: translateY(-50%); 
   }
   
   .footer-socials img {
