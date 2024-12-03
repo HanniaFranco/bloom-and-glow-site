@@ -7,10 +7,12 @@ function About() {
   return (
     <>
       <Header />
-    <div className="about-container">
-      <h1 className="about-title">About Us</h1>
-      <p className="about-text">En esta página puedes encontrar más sobre nosotros.</p>
-    </div>
+      <div className="aboutus-container">
+        <div className="welcome-section">
+          <p className="home-title">ACERCA DE NOSOTROS</p>
+          <p className="home-text">Conócenos</p>
+        </div>
+      </div>
     <Footer />
     </>
   );

@@ -7,9 +7,12 @@ function OffersPage() {
     return (
       <>
         <Header />
-        <div className="products-container">
-          <h1 className="products-title">NUESTROS OFERTAS</h1>
+        <div className="offers-container">
+        <div className="welcome-section">
+          <p className="home-title">PURPLE DAY</p>
+          <p className="home-text">Hasta 50% de Descuento</p>
         </div>
+      </div>
         <Footer />
       </>
     );

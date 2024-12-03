@@ -24,7 +24,8 @@ html {
 
 
 .home-title {
-  font-size: 4rem;
+  font-size: 10rem;
+  font-weight: 700;
   color: #f0f0f0;
   margin-bottom: 1px; 
 }
@@ -56,3 +57,37 @@ html {
   margin: 20px 0;
 }
 
+/* Responsivo */
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 100px 20px;
+  }
+
+  .home-title {
+    font-size: 2rem; 
+    margin-bottom: 0px; 
+  }
+
+  .home-text {
+    font-size: 1rem;
+  }
+
+  .products-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section {
+    padding: 80px 0px;
+  }
+
+  .home-title {
+    font-size: 1.2; 
+    margin-bottom: 0;
+  }
+
+  .home-text {
+    font-size: 1rem;
+  }
+}

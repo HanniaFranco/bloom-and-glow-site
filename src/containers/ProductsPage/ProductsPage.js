@@ -8,7 +8,10 @@ function ProductsPage() {
     <>
       <Header />
       <div className="products-container">
-        <h1 className="products-title">NUESTROS PRODUCTOS</h1>
+        <div className="welcome-section">
+          <p className="home-title">NUESTROS PRODUCTOS</p>
+          <p className="home-text">Todas las Categorías</p>
+        </div>
       </div>
       <Footer />
     </>

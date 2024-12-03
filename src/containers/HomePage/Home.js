@@ -10,22 +10,22 @@ import image3 from '../../assets/images/product_3.png';
 function Home() {
   const products = [
     {
+      id: 1,
       image: image1,
-      name: 'Playera Strawberry',
-      description: 'Camiseta de cuello redondo de manga corta, ideal para verano.',
-      price: 200.00,
+      name: 'Playera de Strawberry con Estampado Ideal para Verano',
+      price: "200.00",
     },
     {
+      id: 2,
       image: image2,
-      name: 'Paleta de Maquillaje',
-      description: 'Paleta de sombras de ojos con brillo mate, 9 sombras.',
-      price: 150.0,
+      name: 'Collar Colagante Casual Cherry con Aretes a Juego',
+      price: "210.00",
     },
     {
+      id: 3,
       image: image3,
-      name: 'Collar Cherry',
-      description: 'Set de collar y pendientes de cereza encantador, tres piezas.',
-      price: 99.90,
+      name: 'Paleta de Maquillaje Browny Eyes Seis Tonos acabado Glowy',
+      price: "320,00",
     },
   ];
 
@@ -34,7 +34,7 @@ function Home() {
       <Header />
       <div className="home-container">
         <div className="welcome-section">
-          <h1 className="home-title">BLOOM & GLOW</h1>
+          <p className="home-title">BLOOM & GLOW</p>
           <p className="home-text">Deja que tu belleza florezca y brille</p>
         </div>
         
@@ -42,10 +42,9 @@ function Home() {
         <div className="products-section">
           {products.map((product, index) => (
             <ProductCard
-              key={index}
+              key={product.id}
               image={product.image}
               name={product.name}
-              description={product.description}
               price={product.price}
             />
           ))}

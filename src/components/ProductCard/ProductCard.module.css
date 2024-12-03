@@ -21,7 +21,8 @@
   
   .name {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
+    text-align: left;
+    font-size: 1em;
     margin: 10px 0;
   }
   
@@ -33,6 +34,8 @@
   .price {
     font-weight: bold;
     margin: 10px 0;
+    color: #363357;
+    text-align: left;
   }
   
   .button {
@@ -45,9 +48,38 @@
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px;
+    margin-top: 15px;
   }
   
   .button:hover {
     background-color: #a09cda;
   }
+
+  /* Product Section */
+.products-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center; 
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.products-title {
+  padding: 1%;
+  font-size: 2rem;
+  color: #73307c;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .products-title {
+    font-size: 2rem;
+  }
+}
   
