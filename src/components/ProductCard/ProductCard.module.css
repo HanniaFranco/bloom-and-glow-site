@@ -1,85 +1,73 @@
 .card {
-    border: 1px solid #f0f0f0;
-    background-color: #f0f0f0;
-    border-radius: 16px;
-    padding: 16px;
-    text-align: center;
-    margin: 16px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .name {
-    font-family: 'Poppins', sans-serif;
-    text-align: left;
-    font-size: 1em;
-    margin: 10px 0;
-  }
-  
-  .description {
-    font-size: 1em;
-    color: #555;
-  }
-  
-  .price {
-    font-weight: bold;
-    margin: 10px 0;
-    color: #363357;
-    text-align: left;
-  }
-  
-  .button {
-    background-color: #7871db;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 20px;
-    margin-top: 15px;
-  }
-  
-  .button:hover {
-    background-color: #a09cda;
-  }
-
-  /* Product Section */
-.products-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 20px;
-  background-color: #f7f7f7;
-  padding: 20px;
-  border-radius: 10px;
-  justify-content: center; 
-  max-width: 1200px; 
-  margin: 0 auto;
-}
-
-.products-title {
-  padding: 1%;
-  font-size: 2rem;
-  color: #73307c;
+  border: 1px solid #f0f0f0;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  padding: 16px;
   text-align: center;
-  margin: 20px 0;
+  margin: 10px;
+  overflow: hidden;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .products-title {
-    font-size: 2rem;
-  }
+.card:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
-  
+
+/* Contenedor de la imagen */
+.image-wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* Para evitar que la imagen se salga del contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen con efecto zoom */
+.image {
+  /*max-width: 100%;
+  height: auto; */
+  width: 980px;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.4s ease; 
+}
+
+.card:hover .image {
+  transform: scale(1.2); 
+}
+
+.name {
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1em;
+  color: #555;
+}
+
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #363357;
+  text-align: left;
+}
+
+.button {
+  background-color: #7871db;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: #a09cda;
+}
