@@ -45,7 +45,7 @@
     gap: 15px;
     position: absolute;
     right: 0;
-    top: 60%;
+    top: 10%;
     transform: translateY(-50%); 
   }
   
@@ -63,7 +63,7 @@
   }
   
   .footer-bottom {
-    margin-top: 20px; /* Reduce el margen superior */
+    margin-top: 20px; 
     text-align: center;
     font-size: 0.875rem;
   }
@@ -83,7 +83,7 @@
   }
   
   .footer-bottom-links a:hover {
-    color: #63448b; /* Hover para los enlaces */
+    color: #63448b; 
   }
   
   /* Responsive */
@@ -96,8 +96,9 @@
     .footer-socials {
       justify-content: center;
       margin-top: 20px;
-      position: static; /* Restablece la posición en pantallas pequeñas */
+      position: static; 
       transform: none;
+      margin-left: 29%;
     }
   
     .footer-bottom-links {
@@ -106,32 +107,33 @@
     }
   
     .footer-list {
-      display: none; /* Oculta las listas por defecto */
-      text-align: center; /* Centra los elementos */
+      display: none; 
+      text-align: left;
+   
     }
   
     .footer-list.open {
-      display: block; /* Muestra las listas cuando están abiertas */
+      display: block; 
     }
   
     .toggle-header {
-      display: block; /* Muestra los encabezados de toggle */
+      display: block; 
     }
   }
   
   @media (min-width: 769px) {
     .toggle-header {
-      display: block; /* Oculta los encabezados de toggle */
+      display: block; 
     }
   
     .footer-list {
-      display: block; /* Asegura que las listas estén siempre visibles */
+      display: block; 
     }
   
     .footer-section h4 {
-      font-weight: bold; /* Asegura que los encabezados estén en negritas */
-      margin-bottom: 20px; /* Añade más espacio abajo */
-      text-align: left; /* Alinea los encabezados a la izquierda */
+      font-weight: bold; 
+      margin-bottom: 20px; 
+      text-align: left; 
     }
   }
   
