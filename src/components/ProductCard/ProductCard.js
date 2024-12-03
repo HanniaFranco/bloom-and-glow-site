@@ -12,7 +12,7 @@ const ProductCard = ({ image, name, price }) => {
         />
       </div>
       <h3 className={styles.name}>{name}</h3>
-      <p className={styles.price}>Mex$ {price}</p>
+      <p className={styles.price}>MXN ${price}</p>
       <button 
         className={styles.button}
         onClick={() => alert(`Se ha añadido ${name} al carrito`)}

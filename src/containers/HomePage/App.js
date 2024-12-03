@@ -7,6 +7,8 @@ import './App.css';
 import OffersPage from '../OffersPage/OffersPage';
 import CartPage from '../CartPage/CartPage';
 import UserPage from '../UserPage/UserPage';
+import SetsPage from '../SetsPage/SetsPage';
+import ShirtsPage from '../ShirtsPage/ShirtsPage';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/offers" element={<OffersPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/user" element={<UserPage />} />
+          <Route path="/shirts" element={<ShirtsPage />} />
+          <Route path="/sets" element={<SetsPage />} />
           <Route path="/about" element={<About />} /> {/* Página About */}
         </Routes>
       </div>

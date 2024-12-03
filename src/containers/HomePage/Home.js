@@ -18,13 +18,13 @@ function Home() {
     {
       id: 2,
       image: image2,
-      name: 'Collar Colagante Casual Cherry con Aretes a Juego',
+      name: 'Vestido de Verano Rosa Corte Largo Estampado Liso con Mangas',
       price: "210.00",
     },
     {
       id: 3,
       image: image3,
-      name: 'Paleta de Maquillaje Browny Eyes Seis Tonos acabado Glowy',
+      name: 'Conjunto de Verano Playera Manga Larga Blanca con Short',
       price: "320,00",
     },
   ];
