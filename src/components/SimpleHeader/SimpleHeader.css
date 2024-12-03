@@ -1,0 +1,33 @@
+.simple-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px; 
+    background-color: #fdf8f8;
+    border-bottom: 1px solid #ddd;
+  }
+
+.home-title {
+    font-size: 4rem;
+    font-family: "Poppins", serif;
+}
+  
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+  
+.icon-user {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.icon-user:hover {
+    filter: brightness(1.2);
+    opacity: 0.8;
+    transform: scale(1.2);
+    filter: hue-rotate(180deg); 
+}

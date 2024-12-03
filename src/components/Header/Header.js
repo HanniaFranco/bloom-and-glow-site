@@ -30,16 +30,20 @@ function Header() {
 
             {/* Íconos */}
             <div className="icons">
+              <Link to="/user">
                 <img 
-                    className="icon-user" 
-                    src={userIcon} 
-                    alt="Usuario"
+                className="icon-user" 
+                src={userIcon} 
+                alt="Usuario"
                 />
-                <img 
-                    className="icon-cart" 
-                    src={cartIcon} 
-                    alt="Carrito"
-                />
+              </Link>
+                <Link to="/cart">
+                  <img 
+                  className="icon-cart" 
+                  src={cartIcon} 
+                  alt="Carrito"
+                  />
+                </Link>
             </div>
 
             {/* Menú hamburguesa */}
