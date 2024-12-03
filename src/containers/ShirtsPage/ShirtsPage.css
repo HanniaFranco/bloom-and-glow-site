@@ -1,0 +1,26 @@
+.shirts-container {
+    margin-bottom: 90px;
+}
+
+.shirts-section {
+    background-image: url('../../assets/images/banner_shirts.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 160px 18px;
+    text-align: center;
+  }
+
+.shirts-title {
+    font-size: 5rem;
+    font-weight: 700;
+    color:   rgba(153, 69, 164, 0.8);
+    margin-bottom: 1px; 
+}
+
+.shirts-text {
+    font-size: 2rem;
+    color:   rgba(84, 36, 90, 0.89);
+    margin-top: 0;
+    font-weight: 800;
+} 
