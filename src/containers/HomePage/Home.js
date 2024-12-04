@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // Importamos UseState aquí
 import './Home.css';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Header from '../../components/Header/Header';
@@ -10,6 +10,15 @@ import ProductPopup from "../../components/ProductPopup/ProductPopup";
 
 function Home() {
   const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleProductClick = (product) => {
+    console.log("Producto seleccionado:", product); 
+    setSelectedProduct(product);
+  };
+
+  const closePopup = () => {
+    setSelectedProduct(null);
+  };
 
   const products = [
     {
@@ -32,16 +41,6 @@ function Home() {
     },
   ];
 
-  // Función para manejar el clic en el nombre del producto
-  const handleProductClick = (product) => {
-    setSelectedProduct(product);
-  };
-
-  // Función para cerrar el popup
-  const closePopup = () => {
-    setSelectedProduct(null);
-  };
-
   return (
     <>
       <Header />
@@ -50,20 +49,24 @@ function Home() {
           <p className="home-title">BLOOM & GLOW</p>
           <p className="home-text">Deja que tu belleza florezca y brille</p>
         </div>
-        
+
         <h2 className="products-title">Productos Destacados</h2>
         <div className="products-section">
           {products.map((product) => (
-            <div key={product.id}>
-              <ProductCard
-                {...product}
-                onProductClick={handleProductClick}  // Solo abrimos l popup al hacer clic en el nombre
-              />
-            </div>
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              image={product.image}
+              name={product.name}
+              price={product.price}
+              onClick={() => handleProductClick(product)} 
+            />
           ))}
         </div>
       </div>
-      <ProductPopup product={selectedProduct} onClose={closePopup} />
+      {selectedProduct && (
+        <ProductPopup product={selectedProduct} onClose={closePopup} />
+      )}
       <Footer />
     </>
   );
