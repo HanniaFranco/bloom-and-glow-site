@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react'; // Importamos 
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 import Header from '../../components/Header/Header';
@@ -18,8 +18,20 @@ import image14 from '../../assets/images/product_14.png';
 import image15 from '../../assets/images/product_15.png';
 import image1 from '../../assets/images/product_1.png'; //Para Explora por Categorías 
 import image3 from '../../assets/images/product_3.png'; //Para Explora por Categorías 
+import ProductPopup from "../../components/ProductPopup/ProductPopup"; // Importamos PopUpPage
 
 function ProductsPage() {
+
+  const [selectedProduct, setSelectedProduct] = useState(null); 
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product); 
+  };
+
+  const closePopup = () => {
+    setSelectedProduct(null); 
+  };
+
     const AllProducts = [
         {
           id: 4,
@@ -97,7 +109,7 @@ function ProductsPage() {
 
 
   return (
-    <>
+      <>
       <Header />
       <div className="products-container">
         <div className="welcome-section">
@@ -112,29 +124,32 @@ function ProductsPage() {
               key={product.id} 
               image={product.image} 
               name={product.name} 
-              price={product.price} 
+              price={product.price}
+              onClick={() => handleProductClick(product)} // Asocia el clic en el nombre para abrir el popup
             />
           ))}
         </div>
 
+        {/* El Popup */}
+        {selectedProduct && (
+          <ProductPopup product={selectedProduct} onClose={closePopup} />
+        )}
+
         {/* Mostrar las imágenes de las categorías Playeras y Conjuntos */}
         <div className='category-border'>
-        <h2 className="products-title">Explora por Categorías</h2>
-        <div className="category-section">
-        <Link to="/shirts" className="category-card">
+          <h2 className="products-title">Explora por Categorías</h2>
+          <div className="category-section">
+            <Link to="/shirts" className="category-card">
               <img src={image1} alt="Playeras" className="category-image" />
               <p className="category-text">PLAYERAS</p>
             </Link>
 
-          {/* Imagen de Conjuntos */}
-          <Link to="/sets" className="category-card">
+            <Link to="/sets" className="category-card">
               <img src={image3} alt="Conjuntos" className="category-image" />
               <p className="category-text">CONJUNTOS</p>
             </Link>
-
           </div>
         </div>
-
       </div>
       <Footer />
     </>

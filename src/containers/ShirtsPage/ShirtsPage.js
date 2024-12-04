@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ShirtsPage.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -6,8 +6,12 @@ import bannerShirts from '../../assets/images/banner_shirts.png';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import image28 from '../../assets/images/product_28.png';
 import image29 from '../../assets/images/product_29.png';
+import ProductPopup from "../../components/ProductPopup/ProductPopup";
 
 function ShirtsPage() {
+
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
     const ShirtProducts = [
         {
           id: 28,
@@ -83,13 +87,23 @@ function ShirtsPage() {
         },
       ];
 
+  // Función para manejar el clic en un producto y abrir el popup
+  const handleProductClick = (product) => {
+    setSelectedProduct(product); 
+  };
+
+  // Función para cerrar el popup:)
+  const closePopup = () => {
+    setSelectedProduct(null); 
+  };
+
   return (
     <>
     <Header />
-    <div className='shirts-container'>
+    <div className="shirts-container">
         <div className="shirts-section">
-            <p className="shirts-title">PLAYERAS</p>
-            <p className="shirts-text">Blom & Glow</p>
+          <p className="shirts-title">PLAYERAS</p>
+          <p className="shirts-text">Blom & Glow</p>
         </div>
         <h2 className="products-title">Playeras</h2>
         <div className="products-grid">
@@ -98,11 +112,17 @@ function ShirtsPage() {
               key={product.id} 
               image={product.image} 
               name={product.name} 
-              price={product.price} 
+              price={product.price}
+              onClick={() => handleProductClick(product)} 
             />
           ))}
         </div>
-    </div>
+
+        {/* El Popup */}
+        {selectedProduct && (
+          <ProductPopup product={selectedProduct} onClose={closePopup} />
+        )}
+      </div>
     <Footer />
     </>
   );

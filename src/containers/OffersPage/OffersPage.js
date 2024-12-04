@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './OffersPage.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import ProductCard from '../../components/ProductCard/ProductCard';
+import ProductPopup from '../../components/ProductPopup/ProductPopup';
 
 function OffersPage() {
+
+    const [selectedProduct, setSelectedProduct] = useState(null); 
+
+    const handleProductClick = (product) => {
+        setSelectedProduct(product);
+    };
+
+    const closePopup = () => {
+        setSelectedProduct(null);
+    };
+
     const OffersProducts = [
         {
           id: 40,
@@ -60,25 +72,28 @@ function OffersPage() {
       <>
         <Header />
         <div className="offers-container">
-        <div className="welcome-section">
-          <p className="home-title">PURPLE DAY</p>
-          <p className="home-text">Hasta 50% de Descuento</p>
-        </div>
-        <h2 className="products-title">Descuentos PURPLE DAY</h2>
-        <div className="products-grid">
-            {OffersProducts.map((product) => (
-            <ProductCard 
-             key={product.id} 
-            image={product.image} 
-            name={product.name} 
-            price={product.price} 
-            isOfferPage={true}  
-            />
-        ))}
-        </div>
+                <div className="welcome-section">
+                    <p className="home-title">PURPLE DAY</p>
+                    <p className="home-text">Hasta 50% de Descuento</p>
+                </div>
+                <h2 className="products-title">Descuentos PURPLE DAY</h2>
+                <div className="products-grid">
+                    {OffersProducts.map((product) => (
+                        <ProductCard 
+                            key={product.id} 
+                            image={product.image} 
+                            name={product.name} 
+                            price={product.price} 
+                            onClick={() => handleProductClick(product)} 
+                        />
+                    ))}
+                </div>
 
-        
-      </div>
+                {/* PopPopPage */}
+                {selectedProduct && (
+                    <ProductPopup product={selectedProduct} onClose={closePopup} />
+                )}
+            </div>
         <Footer />
       </>
     );

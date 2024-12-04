@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Header from '../../components/Header/Header';
@@ -6,8 +6,11 @@ import Footer from '../../components/Footer/Footer';
 import image1 from '../../assets/images/product_1.png';
 import image2 from '../../assets/images/product_2.png';
 import image3 from '../../assets/images/product_3.png';
+import ProductPopup from "../../components/ProductPopup/ProductPopup";
 
 function Home() {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
   const products = [
     {
       id: 1,
@@ -29,6 +32,16 @@ function Home() {
     },
   ];
 
+  // Función para manejar el clic en el nombre del producto
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+  };
+
+  // Función para cerrar el popup
+  const closePopup = () => {
+    setSelectedProduct(null);
+  };
+
   return (
     <>
       <Header />
@@ -41,19 +54,19 @@ function Home() {
         <h2 className="products-title">Productos Destacados</h2>
         <div className="products-section">
           {products.map((product) => (
-            <ProductCard
-              key={product.id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-            />
+            <div key={product.id}>
+              <ProductCard
+                {...product}
+                onProductClick={handleProductClick}  // Solo abrimos l popup al hacer clic en el nombre
+              />
+            </div>
           ))}
         </div>
-  
-        <Footer />
       </div>
+      <ProductPopup product={selectedProduct} onClose={closePopup} />
+      <Footer />
     </>
   );
 }
 
-export default Home
+export default Home;

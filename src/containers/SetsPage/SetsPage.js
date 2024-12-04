@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SetsPage.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -7,8 +7,22 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 import image16 from '../../assets/images/product_16.png';
 import image17 from '../../assets/images/product_17.png';
 import image18 from '../../assets/images/product_18.png';
+import ProductPopup from '../../components/ProductPopup/ProductPopup';
 
 function SetsPage() {
+
+    const [selectedProduct, setSelectedProduct] = useState(null); 
+
+    // Para manejar el clic en un producto
+    const handleProductClick = (product) => {
+        setSelectedProduct(product);
+    };
+
+    // Para cerrar el popup
+    const closePopup = () => {
+        setSelectedProduct(null);
+    };
+
     const SetsProducts = [
         {
           id: 16,
@@ -88,23 +102,29 @@ function SetsPage() {
   return (
     <>
     <Header />
-    <div className='sets-container'>
-        <div className="sets-section">
-          <p className="shirts-title">SETS DE ROPA</p>
-          <p className="shirts-text">Blom & Glow</p>
-        </div>
-        <h2 className="products-title">Playeras</h2>
-        <div className="products-grid">
-          {SetsProducts.map((product) => (
-            <ProductCard 
-              key={product.id} 
-              image={product.image} 
-              name={product.name} 
-              price={product.price} 
-            />
-          ))}
-        </div>
-    </div>
+    <div className="sets-container">
+                <div className="sets-section">
+                    <p className="shirts-title">SETS DE ROPA</p>
+                    <p className="shirts-text">Blom & Glow</p>
+                </div>
+                <h2 className="products-title">Sets de Ropa</h2>
+                <div className="products-grid">
+                    {SetsProducts.map((product) => (
+                        <ProductCard 
+                            key={product.id} 
+                            image={product.image} 
+                            name={product.name} 
+                            price={product.price} 
+                            onClick={() => handleProductClick(product)} 
+                        />
+                    ))}
+                </div>
+
+                {/* PopUpPage */}
+                {selectedProduct && (
+                    <ProductPopup product={selectedProduct} onClose={closePopup} />
+                )}
+            </div>
     <Footer />
     </>
     
