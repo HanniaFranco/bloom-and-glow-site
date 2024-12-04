@@ -1,0 +1,81 @@
+.products-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-container {
+    background-color: #f8f8f8;
+    padding: 70px 50px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 28px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", serif;
+    margin-bottom: 70px;
+    margin-top: 50px;
+}
+
+.user-title {
+    text-align: center;
+    color: rgba(79, 43, 83, 0.8);
+    padding-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 1px;
+    border: 1px solid #f1eded;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.login-button {
+    background-color: rgba(153, 69, 164, 0.8);
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: rgba(156, 103, 163, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .user-container {
+        padding: 20px 10px;
+    }
+
+    .user-title {
+        font-size: 1.5rem;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .login-button {
+        font-size: 16px;
+    }
+}

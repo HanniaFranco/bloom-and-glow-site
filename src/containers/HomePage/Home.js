@@ -25,7 +25,7 @@ function Home() {
       id: 3,
       image: image3,
       name: 'Conjunto de Verano Playera Manga Larga Blanca con Short',
-      price: "320,00",
+      price: "320.00",
     },
   ];
 
