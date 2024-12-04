@@ -1,13 +1,203 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 .home-title {
     font-size: 5rem;
     font-family: "Poppins", serif;
 }
 
-.logo {
-    font-size: 1.5rem;
+.cart-container {
+    background-color: #f8f8f8;
+    padding-bottom: 80px;
+    font-family: "Poppins", serif;
+}
+
+.cart-title-main {
+    color: rgba(79, 43, 83, 0.8);
+}
+
+.cart-title {
+    padding-top: 2%;
+    font-size: 24px;
     font-weight: bold;
-    text-decoration: none;
-    color: inherit; 
+    color: rgba(153, 69, 164, 0.8);
+    text-align: left;
+    margin-left: 350px;
+}
+
+.cart-summary {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+    text-align: left;
+    margin-left: 350px;
+    margin-bottom: 40px;
+}
+
+.cart-items {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px; 
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    width: 600px;
+    margin: 10px auto;
+    position: relative; 
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.cart-item-image {
+    width: 300px;
+    height: 250px; 
+    object-fit: cover; /* Para que no se distorsione */
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cart-item-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px; /* Subí el nombre con un margen superior */
+}
+
+.cart-item-details p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 0;
+}
+
+.cart-item-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: purple;
+    position: absolute;
+    bottom: 10px; /* Coloca el precio en la parte inferior */
+    margin-left: 250px;
+}
+
+.cart-item-actions {
+    position: absolute;
+    bottom: 10px; 
+    margin-left: 300px;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 30px; 
+    color: #333;
+}
+
+.remove-button:hover {
+    color: #ee1616; 
+}
+
+.total {
+    margin-top: 30px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 350px;
+    color: rgb(84, 59, 87);
+    padding-bottom: 30px;
+
+}
+
+.checkout {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.checkout-button {
+    background-color: rgba(153, 69, 164, 0.8);
+    font-family: "Poppins", serif;
+    color: white;
+    padding: 12px 40px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 28px;
+}
+
+.checkout-button:hover {
+    background-color: rgba(156, 103, 163, 0.8);
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 3rem;
+    }
+
+    .cart-title, .cart-summary, .total {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .cart-item {
+        width: 70%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item-image {
+      width: 300px;
+      height: 250px; 
+      object-fit: cover; /* Para que no se distorsione */
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .cart-item-details {
+        align-items: left;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .cart-item-prices {
+        padding-bottom: 20px;
+        padding-left: 3px;
+    }
+
+    .cart-item-actions {
+      position: absolute;
+      padding-bottom: 30px;
+      margin-left: 50px;
+
+    }
+
+    .remove-button {
+        font-size: 24px;
+    }
+
+    .checkout-button {
+        width: 40%;
+        padding: 12px 0;
+    }
 }

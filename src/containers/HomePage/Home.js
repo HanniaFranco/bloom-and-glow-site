@@ -40,7 +40,7 @@ function Home() {
         
         <h2 className="products-title">Productos Destacados</h2>
         <div className="products-section">
-          {products.map((product, index) => (
+          {products.map((product) => (
             <ProductCard
               key={product.id}
               image={product.image}
