@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ProductCard.module.css';
 
-const ProductCard = ({ image, name, price }) => {
+const ProductCard = ({ image, name, price, isOfferPage }) => {
   return (
     <div className={styles.card}>
       <div className={styles["image-wrapper"]}>
@@ -10,9 +10,12 @@ const ProductCard = ({ image, name, price }) => {
           alt={name} 
           className={styles.image} 
         />
+        
       </div>
       <h3 className={styles.name}>{name}</h3>
-      <p className={styles.price}>MXN ${price}</p>
+      <p className={styles.price}>MXN ${price}
+      {isOfferPage && <span className={styles.offerText}> 50% OFF</span>}
+      </p>
       <button 
         className={styles.button}
         onClick={() => alert(`Se ha añadido ${name} al carrito`)}
